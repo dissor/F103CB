@@ -1,1 +1,4 @@
 MDK-ARM/*
+!MDK-ARM/F103CB.uvoptx
+!MDK-ARM/F103CB.uvprojx
+!MDK-ARM/startup_stm32f103xb.s

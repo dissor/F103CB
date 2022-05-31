@@ -60,86 +60,13 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#include "SEGGER_RTT.h"
-#include <stdio.h>
 
-struct
-{
-  uint16_t adc1;
-  uint16_t adc2;
-}ADC_Value[6];
-
-void HAL_WWDG_EarlyWakeupCallback(WWDG_HandleTypeDef *hwwdg)
-{
-  HAL_WWDG_Refresh(hwwdg);
-}
-
-int fputc(int ch, FILE *f)
-{
-  SEGGER_RTT_PutChar(0, ch);
-  return ch;
-}
 /* USER CODE END 0 */
 
 /**
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
-{
-  /* USER CODE BEGIN 1 */
-  printf("ddd11111dddd\n");
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_ADC1_Init();
-  MX_ADC2_Init();
-  MX_WWDG_Init();
-  MX_TIM1_Init();
-  MX_CAN_Init();
-  MX_USART1_UART_Init();
-  MX_USART3_UART_Init();
-  MX_TIM4_Init();
-  /* USER CODE BEGIN 2 */
-  
-  HAL_ADCEx_Calibration_Start(&hadc1);
-  HAL_ADCEx_Calibration_Start(&hadc2);
-  HAL_ADC_Start(&hadc2);
-  HAL_ADCEx_MultiModeStart_DMA(&hadc1, (uint32_t*)ADC_Value, 6);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-    printf("ddddddd\n");
-    HAL_Delay(1000);
-  }
-  /* USER CODE END 3 */
-}
 
 /**
   * @brief System Clock Configuration
