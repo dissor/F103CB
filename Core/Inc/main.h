@@ -58,6 +58,56 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define RS485_DE_Pin GPIO_PIN_13
+#define RS485_DE_GPIO_Port GPIOC
+#define I2C_SDA_Pin GPIO_PIN_2
+#define I2C_SDA_GPIO_Port GPIOA
+#define I2C_SCL_Pin GPIO_PIN_3
+#define I2C_SCL_GPIO_Port GPIOA
+#define I2C_INT_Pin GPIO_PIN_6
+#define I2C_INT_GPIO_Port GPIOA
+#define CAT1_VBUS_INT_Pin GPIO_PIN_7
+#define CAT1_VBUS_INT_GPIO_Port GPIOA
+#define HIGH_LED_Pin GPIO_PIN_0
+#define HIGH_LED_GPIO_Port GPIOB
+#define LOW_LED_Pin GPIO_PIN_1
+#define LOW_LED_GPIO_Port GPIOB
+#define CAT1_POW_Pin GPIO_PIN_2
+#define CAT1_POW_GPIO_Port GPIOB
+#define CAT1_TX_Pin GPIO_PIN_10
+#define CAT1_TX_GPIO_Port GPIOB
+#define CAT1_RX_Pin GPIO_PIN_11
+#define CAT1_RX_GPIO_Port GPIOB
+#define DO_CAT1_INT_Pin GPIO_PIN_12
+#define DO_CAT1_INT_GPIO_Port GPIOB
+#define I2C_NRST_Pin GPIO_PIN_13
+#define I2C_NRST_GPIO_Port GPIOB
+#define ACC_EN_Pin GPIO_PIN_14
+#define ACC_EN_GPIO_Port GPIOB
+#define BK_LED_Pin GPIO_PIN_15
+#define BK_LED_GPIO_Port GPIOB
+#define GPS_32K_Pin GPIO_PIN_8
+#define GPS_32K_GPIO_Port GPIOA
+#define RS485_TX_Pin GPIO_PIN_9
+#define RS485_TX_GPIO_Port GPIOA
+#define RS485_RX_Pin GPIO_PIN_10
+#define RS485_RX_GPIO_Port GPIOA
+#define CAT1_DG_INT_Pin GPIO_PIN_15
+#define CAT1_DG_INT_GPIO_Port GPIOA
+#define CAT1_RST_Pin GPIO_PIN_3
+#define CAT1_RST_GPIO_Port GPIOB
+#define ALARM_MODE_Pin GPIO_PIN_4
+#define ALARM_MODE_GPIO_Port GPIOB
+#define LEFT_LED_Pin GPIO_PIN_5
+#define LEFT_LED_GPIO_Port GPIOB
+#define RIGHT_LED_Pin GPIO_PIN_6
+#define RIGHT_LED_GPIO_Port GPIOB
+#define BUZZER_CTRL0_Pin GPIO_PIN_7
+#define BUZZER_CTRL0_GPIO_Port GPIOB
+#define BUZZER_CTRL1_Pin GPIO_PIN_8
+#define BUZZER_CTRL1_GPIO_Port GPIOB
+#define CAT1_INT_Pin GPIO_PIN_9
+#define CAT1_INT_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

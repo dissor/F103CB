@@ -20,8 +20,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "can.h"
 #include "dma.h"
 #include "tim.h"
+#include "usart.h"
 #include "wwdg.h"
 #include "gpio.h"
 
@@ -112,6 +114,10 @@ int main(void)
   MX_ADC2_Init();
   MX_WWDG_Init();
   MX_TIM1_Init();
+  MX_CAN_Init();
+  MX_USART1_UART_Init();
+  MX_USART3_UART_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   
   HAL_ADCEx_Calibration_Start(&hadc1);
